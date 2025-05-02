@@ -1,7 +1,4 @@
-# Project  Url
-https://roadmap.sh/projects/expense-tracker
 
-```markdown
 # Expense Tracker
 
 ## Overview
