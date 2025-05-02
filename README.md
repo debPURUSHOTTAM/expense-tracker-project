@@ -1,46 +1,69 @@
-# Expense Tracker API
+# Project  Url
+https://roadmap.sh/projects/expense-tracker
 
-## Descripción
-Expense Tracker API es una aplicación diseñada para ayudar a los usuarios a gestionar sus gastos de manera efectiva. Permite a los usuarios registrarse, iniciar sesión y realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en sus gastos, brindando una manera fácil de mantener un control financiero personal.
+```markdown
+# Expense Tracker
 
-## Características
-- **Registro e Inicio de Sesión:**
-  - Los usuarios pueden registrarse y crear una cuenta.
-  - Autenticación segura mediante tokens JWT.
+## Overview
+The Expense Tracker is a Java application designed to help users manage their expenses. It allows users to add, update, delete, and view expenses, as well as view summaries of expenses for specific months.
 
-- **Gestión de Gastos:**
-  - **Crear Gasto:** Añadir nuevos gastos con detalles específicos.
-  - **Leer Gastos:** Listar y filtrar gastos por:
-    - Última semana
-    - Último mes
-    - Últimos 3 meses
-    - Rango de fechas personalizado
-  - **Actualizar Gasto:** Modificar la información de los gastos existentes.
-  - **Eliminar Gasto:** Remover gastos que ya no sean necesarios.
+## Features
+- Add new expenses with date, description, amount, and category.
+- Update existing expenses.
+- Delete expenses.
+- View all expenses.
+- View a summary of all expenses.
+- View a summary of expenses for a specific month.
+- Save and load expenses from a file.
 
-- **Categorías de Gastos:**
-  - Compras
-  - Ocio
-  - Electrónica
-  - Servicios
-  - Ropa
-  - Salud
-  - Otros
+## Project Structure
+```
+Expense_Tracker/
+├── Expense.java
+├── ExpenseStorage.java
+└── ExpenseTracker.java
+```
 
-## Tecnologías Utilizadas
-- **Lenguaje de Programación:** Java.
-- **Framework:** Spring Boot, Spring Security.
-- **Base de Datos:** PostgreSQL.
-- **ORM:** Model Mapper.
-- **Documentación:** Swagger.
+## Classes
 
-## Arquitectura
-![image](https://github.com/user-attachments/assets/6c53bdbd-e25e-4292-9943-ba0a6ec528e2)
+### Expense
+Represents an individual expense with the following attributes:
+- `date`: The date of the expense.
+- `description`: A brief description of the expense.
+- `amount`: The amount spent.
+- `category`: The category of the expense.
 
+### ExpenseStorage
+Handles saving and loading expenses to and from a file.
+- `saveExpenses(ArrayList<Expense> expenses)`: Saves the list of expenses to a file.
+- `loadExpenses()`: Loads the list of expenses from a file.
 
-## Endpoints
-![image](https://github.com/user-attachments/assets/37f29ee2-227b-451a-b65d-4bc21a44f848)
+### ExpenseTracker
+The main class that provides a menu-driven interface for managing expenses.
+- `main(String[] args)`: The entry point of the application.
+- `addExpense(Scanner scanner, ArrayList<Expense> expenses)`: Adds a new expense.
+- `updateExpense(Scanner scanner, ArrayList<Expense> expenses)`: Updates an existing expense.
+- `deleteExpense(Scanner scanner, ArrayList<Expense> expenses)`: Deletes an expense.
+- `viewAllExpenses(ArrayList<Expense> expenses)`: Displays all expenses.
+- `viewSummary(ArrayList<Expense> expenses)`: Displays a summary of all expenses.
+- `viewMonthlySummary(Scanner scanner, ArrayList<Expense> expenses)`: Displays a summary of expenses for a specific month.
 
-![image](https://github.com/user-attachments/assets/b210e75a-86b7-4b0a-9ea4-e330e6a2ed19)
+## Usage
+1. Compile the Java files:
+   ```bash
+   javac Expense_Tracker/*.java
+   ```
+2. Run the application:
+   ```bash
+   java Expense_Tracker.ExpenseTracker
+   ```
 
-**Referencia del proyecto** https://roadmap.sh/projects/expense-tracker-api
+## Dependencies
+- Java Development Kit (JDK) 8 or higher.
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+Purushottam deb
+
