@@ -58,9 +58,6 @@ The main class that provides a menu-driven interface for managing expenses.
 ## Dependencies
 - Java Development Kit (JDK) 8 or higher.
 
-## License
-This project is licensed under the MIT License.
-
 ## Author
 Purushottam deb
 
